@@ -1,0 +1,931 @@
+/*especificaciones generales*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #160e2c;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  
+}
+
+/*Menu de la parte superior*/
+.menu-inicial {
+  list-style: none;
+  background-color: #ff5757;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+}
+
+
+.menu-inicial li a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  
+ display: block;
+}
+
+.menu-inicial li {
+  display: inline-block;
+  text-align: right;
+  padding-inline: 15px;
+  
+}
+
+
+
+/*hola*/
+.menu {
+  list-style: none;
+}
+
+.menu>li {
+  position: relative;
+  display: inline-block;
+}
+
+.menu>li>a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  background-color: #ff5757
+}
+
+
+.menu>li>a:hover {
+  background-color: #ff5757;
+}
+
+/* Submenú desplegable */
+.submenu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ff5757;
+  list-style: none;
+  padding-left: 0%;
+  margin: 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-radius: 0 0 1px 1px;
+  color: #fff;
+}
+
+.submenu li {
+  display: block;
+  text-align: left;
+}
+
+.submenu li a {
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+
+/* Mostrar submenu al hacer hover */
+.dropdown:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Mostrar submenu al hacer hover */
+.dropdown {
+  position: relative;
+
+}
+
+.dropdown:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+.icono1 {
+  width: 24px;
+  height: auto;
+  
+  transition: transform 0.8s ease;
+}
+
+
+.icono1:hover {
+  transform: scale(1.6);
+}
+
+.icono2 {
+  width: 24px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Solo agrandar al pasar el cursor */
+.icono2:hover {
+  transform: scale(1.6);
+}
+
+
+.icono3 {
+  width: 24px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Solo agrandar al pasar el cursor */
+.icono3:hover {
+  transform: scale(1.6);
+}
+
+
+
+#facebook {
+  margin-left: 80px;
+  height: 40px;
+  width: auto;
+}
+
+#instagram {
+  height: 40px;
+  width: auto;
+}
+
+#twiter {
+  height: 40px;
+  width: auto;
+}
+
+
+
+
+
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  background-color: #ff5757;
+  padding: 15px;
+  cursor: pointer;
+  text-align: right;
+}
+
+/* Responsive: menú móvil */
+
+  /* Para evitar que se superponga el contenido */
+ 
+.menu-toggle {
+  font-size: 28px;
+  color: white;
+  background-color: #d64040;
+  border: none;
+  cursor: pointer;
+} 
+@media (max-width: 768px) {
+  .menu-inicial {
+    display: none;
+    flex-direction: column;
+    background-color: #ff5757;
+    text-align: left;
+    padding: 10px 0;
+    position: absolute;
+    top: 60px; /* debajo del menú fijo */
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  .menu-inicial li {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .menu-inicial.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1001;
+    background-color: #ff5757;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Video portada*/
+ video {
+  padding-top: 50px;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+
+}
+
+/*Fondo sección de febrero*/
+.contenido-principal {
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-bottom: 90px;
+  margin-inline-start: 11%;
+  margin-inline-end: 11%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+
+
+.febfond {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+   /* evita que se estire demasiado */
+  margin: 0 auto;     /* centra horizontalmente */
+  height: auto;
+  background-image: url("img/febfon.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.febfond img {
+  max-width: 90%;
+  height: auto;
+  object-fit: contain;
+    
+}
+@media (max-width: 400px) {
+  .febfond {
+    width: 90%;
+     /* opcional, si quieres que se adapte mejor */
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .febfond {
+    padding: 1rem;
+    aspect-ratio: auto; 
+    flex-direction: column;
+  }
+} @media (max-width: 400px) {
+  .febfond {
+    padding: 1rem;
+    aspect-ratio: auto; 
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*Texto sección de febrero*/
+.febtitu {
+  position: absolute;
+  color: rgb(102, 47, 47);
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  margin-top: -800px;
+  padding-left: 900px;
+}
+
+
+
+.febtex {
+  margin-right: 59%;
+}
+
+.febtexto {
+  margin-right: 13%;
+}
+
+/*Fondo sección de homenajes*/
+
+.homfond {
+  padding-top: 5%;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.slide-in-image {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  max-width: 90%;  /* cambia el tamaño de la imagen */
+  height: auto;
+
+}
+
+.slide-in-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+.yumka1 {
+  position: relative;
+  width: 90%;
+  padding-left: 5%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.yumfondo-2 {
+  position: relative;
+  width: 90%;
+  padding-left: 5%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%
+}
+
+/*Imagenes deslisantes*/
+
+@media (max-width: 768px) {
+  .yumfondo-2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .img-fondo,
+  .carrusel-cont {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.yumfondo-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.img-fondo {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+
+.carrusel-cont {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+/* Mueve las imágenes del carrusel */
+.carrusel-mover {
+  display: flex;
+  width: fit-content;
+  height: 100%;
+  animation: slide 36s infinite;
+  transition: transform 1s ease-in-out;
+}
+
+.carrusel-mover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Animación automática */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  13.8% { transform: translateX(0); }
+  16.6% { transform: translateX(-100%); }
+  30.4% { transform: translateX(-100%); }
+  33.3% { transform: translateX(-200%); }
+  47.1% { transform: translateX(-200%); }
+  50%   { transform: translateX(-300%); }
+  63.8% { transform: translateX(-300%); }
+  66.6% { transform: translateX(-400%); }
+  80.4% { transform: translateX(-400%); }
+  83.3% { transform: translateX(-500%); }
+  97.1% { transform: translateX(-500%); }
+  100%  { transform: translateX(0); }
+}
+
+/* Hacer todo más responsivo */
+
+
+@media (max-width: 768px) {
+  .yumfondo-2 {
+    /* carrusel debajo */
+     flex-direction: column;
+    align-items: center;
+  }
+
+  .img-fondo {
+    width: 90%;
+  }
+
+  .carrusel-cont {
+    width: 90%;
+    margin-top: 10px;
+  }
+}
+
+/* Flechas */
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  color: #000;
+  border-radius: 20%;
+}
+
+button.prev {
+  left: 15px;
+}
+
+button.next {
+  right: 15px;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/*Fondo siguiente sección de yumká*/
+
+.yumfon-3 {
+  position: relative;
+  width: 90%;
+  padding-left: 5%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+.jaguar {
+  position: absolute;
+  margin-top: -53%;
+  margin-left: 60%;
+}
+
+
+
+.voli1 {
+  position: relative;
+  width: 90%;
+  padding-left: 5%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%
+}
+
+.voli2 {
+  position: relative;
+  width: 90%;
+  padding-left: 5%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%
+}
+
+.estrella {
+  width: 26%;
+  margin-left: 16%;
+  margin-top: -23%;
+
+}
+
+
+.voli3 {
+  position: relative;
+  width: 90%;
+  margin-top: 5%;
+  padding-left: 5%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%
+}
+
+.voligif2 {
+  position: absolute;
+  margin-top: -10%;
+  margin-left: 80%;
+}
+
+.maestrogift {
+  width: 50%;
+  padding-left: 26%;
+
+}
+
+
+.carousel-container {
+  margin-left: 4%;
+  margin-top: -2%;
+    position: relative;
+
+    width: 90vw; /* Ajusta el ancho del carrusel (ej: 90% del ancho de la ventana) */
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    height: 90%; /* Ajusta la altura del carrusel (ej: 70% de la altura de la ventana) */
+    max-height: 700px;
+    overflow: hidden; /* ¡ESENCIAL! Esto recorta las partes de las imágenes laterales */
+    border-radius: 12px;
+    /* Sombra sutil para el contenedor principal */
+    display: flex; /* Usamos flexbox para centrar el track */
+    align-items: center; /* Centra verticalmente el track dentro del contenedor */
+}
+
+.carousel-track {
+    display: flex; /* Para que las diapositivas se muestren en fila */
+    transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento del carrusel */
+    /* El ancho de este track será ajustado dinámicamente por JavaScript */
+}
+
+.carousel-slide {
+    flex-shrink: 0; /* Evita que las diapositivas se encojan en un contenedor flex */
+    /* --- AJUSTA EL ANCHO DE CADA SLIDE. Debe ser MENOR que el carousel-container --- */
+    width: 60vh; /* El ancho de cada diapositiva individual (60% del ancho de la ventana) */
+    max-width: 800px; /* Max-width para la diapositiva individual */
+    height: 100%; /* Ocupa toda la altura del carousel-container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Recorta el contenido si la imagen es más grande que el slide */
+    /* --- REDUCE EL MARGEN ENTRE SLIDES si quieres que se vean más pegados --- */
+    margin: 0 0.5vw; /* Espacio horizontal (0.5% del ancho de la ventana) entre las diapositivas */
+    border-radius: 10px;
+    box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho/alto */
+
+    /* ***** EFECTO DE IMAGENES LATERALES MÁS PEQUEÑAS Y TENUES ***** */
+    transform: scale(0.8); /* Reduce la imagen al 80% de su tamaño original para las laterales */
+    opacity: 0.6; /* Hace la imagen 60% opaca (más tenue) */
+
+    /* Sombra para las imágenes que NO son la principal */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+
+    /* Transiciones suaves para todas las propiedades que cambian */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    /* ***** ESTILOS PARA LA IMAGEN PRINCIPAL (ACTIVA) ***** */
+    transform: scale(1); /* La imagen activa vuelve a su tamaño normal (100%) */
+    opacity: 1; /* Completamente visible */
+    z-index: 2; /* Asegura que la imagen activa esté por encima de las otras */
+
+    /* Sombra más pronunciada para la imagen principal */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+}
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+/* Estilos para los botones de navegación (flechas) */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 2em;
+    border-radius: 5px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+    left: 12%;
+}
+
+.carousel-button.next {
+    right: 10%;
+}
+
+
+
+
+/** seccion boton de muy interesante **/
+.infovideo{
+  width: 70%;
+  margin-left:190px ;
+  margin-top: 0px;
+}
+
+
+.boton {
+    position: absolute;
+
+    left:50%; 
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height:auto;
+}
+.boton2{
+    width:200px;
+    height:70px;
+    background: linear-gradient(to left top, #ff5757 50%, #f54141 50%);
+    border-style: none;
+    color:#fff;
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-family: 'Lato';
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    transition: all .5s;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+button span{
+    position: absolute;
+    display: block;
+}
+button span:nth-child(1){
+    height: 3px;
+    width:200px;
+    top:0px;
+    left:-200px;
+    background: linear-gradient(to right, rgba(0,0,0,0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 1s;
+}
+
+
+@keyframes span1{
+    0%{
+        left:-200px
+    }
+    100%{
+        left:200px;
+    }
+  }
+
+
+button span:nth-child(2){
+    height: 70px;
+    width: 3px;
+    top:-70px;
+    right:0px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #f6e58d);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 10px;
+    animation: span2 2s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes span2{
+    0%{
+        top:-70px;
+    }
+    100%{
+        top:70px;
+    }
+}
+button span:nth-child(3){
+    height:3px;
+    width:200px;
+    right:-200px;
+    bottom: 0px;
+    background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    animation: span3 2s linear infinite;
+    animation-delay: 3s;
+}
+
+
+@keyframes span3{
+    0%{
+        right:-200px;
+    }
+    100%{
+        right: 200px;
+    }
+}
+
+button span:nth-child(4){
+    height:70px;
+    width:3px;
+     bottom:-70px;  
+    
+    left:0px;
+    background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    animation: span4 2s linear infinite;
+    animation-delay: 4s;
+}
+
+
+@keyframes span4{
+    0%{
+        bottom: -70px;
+    }
+    100%{
+        bottom:70px;
+    }
+} 
+
+button:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+}
+button:hover span{
+    animation-play-state: paused;
+}
+
+.footer {
+  background-color: #ff5757;
+  width: 100%;
+  height: 15%;
+  margin-top: 5%;
+}
+
+.footer-content {
+  margin-top: 3%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+
+
+ .popup {
+  height: 240px;
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      background-color: #ffffff;
+      color: #721c24;
+      padding-right: 15px;
+      margin-top: 0px;
+      border: 1px solid #f5c6cb;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: none; /* Oculto por defecto */
+    }
+
+    /* Botón para cerrar el mensaje */
+    .popup button {
+      background-color: transparent;
+      border: none;
+      color: #721c24;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+
+    #anuncio {
+      width: 180px;
+      margin-top : -20px;;
+      
+    }
+
+
+
+
+    
+    @media(max-width: 768px) {
+
+    .febfond {
+      width:80%;
+  padding-left: 80px;
+    padding-right: 80px;
+    }
+
+     .homfond {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .slide-in-image {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+@media(max-width:400px) {
+    .febfond {
+      width:80%;
+  padding-left: 80px;
+    padding-right: 80px;
+    }
+    }
+
+

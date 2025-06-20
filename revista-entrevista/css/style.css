@@ -1,0 +1,150 @@
+.fondo {
+    width: auto;
+    padding: 20%;
+    padding-top: 500px;
+    background: linear-gradient(to right,  #447696, #160e2c); 
+
+}
+
+
+.fondo iframe {
+    width: auto;
+    padding: 20%;
+    padding-top: 500px;
+}
+
+
+
+.botoncito {
+width: 100px;
+position: fixed;
+
+}
+
+
+
+.portada {
+    width: 80%;
+    height: 500px;
+    margin-top: -680px;
+    display: flex;
+    margin-left: 130px;
+    margin-right: 80px;
+
+}
+
+.titulo{
+    padding-left:  128px;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+.presentacion{
+    padding-right: 150px;
+    padding-top: 5px;
+    margin-top: -50px;
+    padding-left: 128px;
+    font-size: 25px;
+    color: white;
+}
+
+.camino-profesional {
+   padding-right: 150px;
+    padding-top: 5px;
+    margin-top: -5px;
+    padding-left: 128px;
+    font-size: 40px;
+    color: rgb(5, 16, 49);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.video-con-fondo {
+  position: relative;
+  width: 1400px; /* mismo ancho que el video */
+  height: 390px; /* mismo alto que el video */
+  margin-bottom: 30px;
+}
+
+.video-con-fondo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* para que se adapte bien */
+  z-index: 1;
+}
+
+.video-con-fondo iframe {
+  margin: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+.ruth{
+  width: 1000px;
+  display: block
+ 
+
+}
+
+
+
+#img-fondo {
+  height: 100px;
+  padding: 0px;
+  margin-top: 1000px;
+}
+
+.video-1 {
+  margin-bottom: -100px;
+}
+
+.video-2 {
+  padding-right: 60%;
+}
+
+.video-3 {
+  padding-right: 60%;
+}
+
+.video-4 {
+  padding-right: 60%;
+}
+
+.video-5 {
+  padding-right: 60%;
+}
+
+.video-6 {
+  padding-right: 60%;
+}
+
+.video-7 {
+  padding-right: 60%;
+}
+
+.video-8 {
+  padding-right: 60%;
+}
+
+#cachorrita {
+  width: 50px;
+  height: auto;
+  margin-left: 530px;
+}
