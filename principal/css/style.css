@@ -1,177 +1,105 @@
 /*especificaciones generales*/
 
+
+
+/* === Estilos generales === */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #160e2c;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* ✅ evita scroll horizontal */
+  overflow-x: hidden;
 }
-
 
 img, video {
   max-width: 100%;
-  height: auto; 
-    margin: 0;
+  height: auto;
+  margin: 0;
   display: block;
 }
 
+/* === Botón hamburguesa === */
 .menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  background-color: #ff5757;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
   position: fixed;
   top: 10px;
-  left: 10px;
-  font-size: 30px;
+  right: 20px;
   z-index: 1001;
-  cursor: pointer;
-  background: white;
-  padding: 5px 10px;
-  border-radius: 5px;
 }
 
+/* === Menú contenedor === */
 .menu_superior {
-  position: fixed;
-  top: 0;
-  left: -100%; /* Escondido fuera de la pantalla */
-  width: 250px;
-  height: 100vh;
+  position: relative;
   background-color: #fff;
+  width: 100%;
   z-index: 1000;
-  transition: left 0.3s ease;
-  overflow-y: auto;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
-.menu_superior.active {
-  left: 0; /* ✅ cuando se activa el menú */
+/* === Menú principal === */
+.menu-inicial {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
-
 
 .menu-inicial li {
-  border-bottom: 1px solid #ccc;
+  border-bottom: none;
+  position: relative;
 }
 
 .menu-inicial li a {
   display: block;
-  padding: 15px;
+  padding: 15px 20px;
   text-decoration: none;
   color: #333;
 }
 
-
-
-
-
-
-
-/*hola*/
-.menu {
-  list-style: none;
-}
-
-.menu>li {
-  position: relative;
-  display: inline-block;
-}
-
-.menu>li>a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  background-color: #ff5757
-}
-
-
-.menu>li>a:hover {
-  background-color: #ff5757;
-}
-
-/* Submenú desplegable */
+/* === Submenú === */
 .submenu {
-  display: block;
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #ff5757;
   list-style: none;
-  padding-left: 0%;
+  padding: 0;
   margin: 0;
   min-width: 180px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  border-radius: 0 0 1px 1px;
-  color: #fff;
-}
-
-.submenu li {
-  display: block;
-  text-align: left;
+  border-radius: 0 0 5px 5px;
+  z-index: 999;
 }
 
 .submenu li a {
+  color: white;
+  padding: 10px 15px;
+}
+
+.dropdown:hover .submenu {
   display: block;
-  text-decoration: none;
-  transition: background-color 0.3s;
 }
 
-
-/* Mostrar submenu al hacer hover */
-.dropdown:hover .submenu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-/* Mostrar submenu al hacer hover */
-.dropdown {
-  position: relative;
-
-}
-
-.dropdown:hover .submenu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-
-.icono1 {
-  width: 24px;
-  height: auto;
-  
-  transition: transform 0.8s ease;
-}
-
-
-.icono1:hover {
-  transform: scale(1.6);
-}
-
-.icono2 {
+/* === Iconos redes === */
+.icono1, .icono2, .icono3 {
   width: 24px;
   height: auto;
   transition: transform 0.3s ease;
 }
 
-/* Solo agrandar al pasar el cursor */
-.icono2:hover {
-  transform: scale(1.6);
-}
-
-
-.icono3 {
-  width: 24px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-/* Solo agrandar al pasar el cursor */
+.icono1:hover,
+.icono2:hover,
 .icono3:hover {
   transform: scale(1.6);
 }
-
-
 
 #facebook {
   margin-left: 80px;
@@ -179,71 +107,30 @@ img, video {
   width: auto;
 }
 
-#instagram {
-  height: 40px;
-  width: auto;
-}
-
+#instagram,
 #twiter {
   height: 40px;
   width: auto;
 }
 
-
-
-
-
-
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: white;
-  background-color: #ff5757;
-  padding: 15px;
-  cursor: pointer;
-  text-align: right;
-}
-
-/* Responsive: menú móvil */
-
-  /* Para evitar que se superponga el contenido */
- 
-/* ✅ Estilo base para el menú (pantallas grandes / escritorio) */
-@media (min-width: 769px) {
-  .menu-inicial {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    background-color: transparent;
-    position: static;
-    width: auto;
-    box-shadow: none;
-  }
-
-  .menu-inicial li {
-    padding: 0;
-  }
-
-  .menu-toggle {
-    display: none;
-  }
-}
-
-/* ✅ Estilo para móviles */
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
   .menu-inicial {
     display: none;
     flex-direction: column;
+    align-items: flex-start;
     background-color: #ff5757;
-    text-align: left;
-    padding: 10px 0;
     position: fixed;
     top: 60px;
     left: 0;
     width: 100vw;
-    max-width: 100vw;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    height: auto;
     z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     overflow-x: hidden;
   }
 
@@ -251,24 +138,32 @@ img, video {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    background-color: #ff5757;
+  .menu-inicial li {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu-inicial li a {
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    z-index: 1001;
-    font-size: 30px;
-    cursor: pointer;
+    padding: 15px 20px;
+  }
+
+  .submenu {
+    position: static;
+    display: none;
+    background-color: #ff5757;
+    width: 100%;
+  }
+
+  .dropdown:hover .submenu {
+    display: block;
   }
 
   body {
     overflow-x: hidden;
   }
 }
+
 
 
 
