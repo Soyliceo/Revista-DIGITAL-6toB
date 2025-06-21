@@ -12,9 +12,13 @@ html, body{
 }
 
 
+
 video {
-    width: 100%;
-    padding-bottom: 100px;
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 
 ::selection{
@@ -560,19 +564,7 @@ section {
 
 
 
-
-
-
-
 @media (max-width: 768px) {
-
-  .wrapper .card {
-    width: 100%;
-    height: auto;
-    margin-left: 0 !important; /* 🔥 Borra cualquier margin-left que tengas */
-    position: relative;
-  }
-    
   html, body {
     padding: 0;
     margin: 0;
@@ -586,21 +578,42 @@ section {
     margin-left: 0;
   }
 
-  .wrapper {
+  .wrapper,
+  .wrapper-1,
+  .wrapper-2,
+  .wrapper-3,
+  .wrapper-4,
+  .wrapper-5,
+  .wrapper-6,
+  .wrapper-7 {
     width: 90%;
     height: auto;
-    margin: 20px 0;
+    margin: 20px auto !important;
     position: relative;
   }
 
-  .wrapper .card {
+  .wrapper .card,
+  .wrapper-1 .card,
+  .wrapper-2 .card,
+  .wrapper-3 .card,
+  .wrapper-4 .card,
+  .wrapper-5 .card,
+  .wrapper-6 .card,
+  .wrapper-7 .card {
+    margin-left: 0 !important;
     width: 100%;
     height: auto;
-    margin-left: 0;
     position: relative;
   }
 
-  .wrapper .back-face img {
+  .wrapper .back-face img,
+  .wrapper-1 .back-face img,
+  .wrapper-2 .back-face img,
+  .wrapper-3 .back-face img,
+  .wrapper-4 .back-face img,
+  .wrapper-5 .back-face img,
+  .wrapper-6 .back-face img,
+  .wrapper-7 .back-face img {
     height: 120px;
     width: 120px;
   }
@@ -615,3 +628,6 @@ section {
     text-align: center;
   }
 }
+
+
+
