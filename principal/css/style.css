@@ -607,9 +607,9 @@ button:hover {
     position: relative;
 
     width: 90vw; /* Ajusta el ancho del carrusel (ej: 90% del ancho de la ventana) */
-    max-width: 1200px; /* Ancho máximo para pantallas grandes */
-    height: 90%; /* Ajusta la altura del carrusel (ej: 70% de la altura de la ventana) */
-    max-height: 700px;
+    max-width: 1000px; /* Ancho máximo para pantallas grandes */
+    height: 70%; /* Ajusta la altura del carrusel (ej: 70% de la altura de la ventana) */
+    max-height: 600px;
     overflow: hidden; /* ¡ESENCIAL! Esto recorta las partes de las imágenes laterales */
     border-radius: 12px;
     /* Sombra sutil para el contenedor principal */
@@ -627,8 +627,8 @@ button:hover {
     flex-shrink: 0; /* Evita que las diapositivas se encojan en un contenedor flex */
     /* --- AJUSTA EL ANCHO DE CADA SLIDE. Debe ser MENOR que el carousel-container --- */
     width: 60vh; /* El ancho de cada diapositiva individual (60% del ancho de la ventana) */
-    max-width: 800px; /* Max-width para la diapositiva individual */
-    height: 100%; /* Ocupa toda la altura del carousel-container */
+    max-width: 700px; /* Max-width para la diapositiva individual */
+    height: 90%; /* Ocupa toda la altura del carousel-container */
     display: flex;
     justify-content: center;
     align-items: center;
