@@ -310,6 +310,7 @@ position: fixed;
   text-align: center;
   margin-top: 40px;
 }
+/* Estilo base para pantallas grandes */
 .febfond {
   position: relative;
   width: 100%;
@@ -327,6 +328,7 @@ position: fixed;
   flex-direction: row;
 }
 
+/* Imagen interna */
 .febfond img {
   width: 100%;
   height: auto;
@@ -334,25 +336,12 @@ position: fixed;
   display: block;
 }
 
-/* Celulares y tablets */
+/* Tablets y celulares */
 @media (max-width: 768px) {
   .febfond {
-    width: 100vw;
-    max-width: 100vw;
+    width: 90vw;               /* ✅ Mejor que 80%, más parecido a los demás */
     padding: 1rem;
-    flex-direction: column;
-  }
-
-  .febfond img {
-    width: 100%;      /* ✅ Que ocupe el 100% del ancho del contenedor */
-    max-width: 100%;  /* ✅ Sin límites */
-  }
-}
-
-/* Para celulares muy pequeños */
-@media (max-width: 400px) {
-  .febfond {
-    padding: 0.5rem;
+    flex-direction: column;    /* ✅ Para acomodarse mejor en vertical */
   }
 
   .febfond img {
@@ -361,6 +350,18 @@ position: fixed;
   }
 }
 
+/* Celulares pequeños */
+@media (max-width: 400px) {
+  .febfond {
+    width: 90vw;               /* ✅ Mantener consistencia */
+    padding: 0.5rem;
+  }
+
+  .febfond img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 
 
@@ -984,18 +985,6 @@ button:hover span{
     
     @media(max-width: 768px) {
 
-    .febfond {
-      width:80%;
-  padding-left: 80px;
-    padding-right: 80px;
-    }
-
-     .homfond {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
   .slide-in-image {
     width: 100%;
     height: auto;
@@ -1011,20 +1000,5 @@ button:hover span{
 
 
 
-
-
-
-
-   
-
-
-
-@media(max-width:400px) {
-    .febfond {
-      width:80%;
-  padding-left: 80px;
-    padding-right: 80px;
-    }
-    }
 
 
