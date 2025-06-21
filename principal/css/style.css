@@ -310,12 +310,11 @@ position: fixed;
   text-align: center;
   margin-top: 40px;
 }
-
 .febfond {
   position: relative;
   width: 100%;
-  max-width: 1500px;     /* Evita que se estire demasiado en pantallas grandes */
-  margin: 0 auto;        /* Centra horizontalmente */
+  max-width: 1500px;
+  margin: 0 auto;
   height: auto;
   background-image: url("img/febfon.jpg");
   background-size: cover;
@@ -325,32 +324,18 @@ position: fixed;
   justify-content: center;
   padding: 2rem;
   box-sizing: border-box;
-  flex-direction: row;   /* Por defecto horizontal */
+  flex-direction: row;
 }
 
 .febfond img {
-  max-width: 90%;        /* Imagen ocupa hasta el 90% del contenedor */
+  width: 100%;
   height: auto;
   object-fit: contain;
+  display: block;
 }
 
-/* Tablets y celulares */
+/* Celulares y tablets */
 @media (max-width: 768px) {
-  .febfond {
-    width: 100vw;            /* Ocupa todo el ancho de la pantalla */
-    max-width: 100vw;
-    padding: 1rem;
-    flex-direction: column;  /* Acomoda contenido en columna */
-    box-sizing: border-box;
-  }
-
-  .febfond img {
-    max-width: 95%;          /* Imagen un poco más grande en móvil */
-  }
-}
-
-/* Opcional para celulares más pequeños */
-@media (max-width: 400px) {
   .febfond {
     width: 100vw;
     max-width: 100vw;
@@ -359,9 +344,23 @@ position: fixed;
   }
 
   .febfond img {
-    max-width: 95%;
+    width: 100%;      /* ✅ Que ocupe el 100% del ancho del contenedor */
+    max-width: 100%;  /* ✅ Sin límites */
   }
 }
+
+/* Para celulares muy pequeños */
+@media (max-width: 400px) {
+  .febfond {
+    padding: 0.5rem;
+  }
+
+  .febfond img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 
 
 
