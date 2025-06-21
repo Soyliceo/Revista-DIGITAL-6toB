@@ -16,47 +16,32 @@
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         <div class="menu_superior">
 
-                <ul class="menu-inicial">
-                        <li><a  href="#" id="Home">Home</a></li>
-
-                        <li class="dropdown">
-                                <a href="#">Índice</a>
-                                <ul class="submenu">
-                                        <li><a href="#feb">14 de febrero</a></li>
-                                        <li><a href="#homenaje">Homenajes</a></li>
-                                        <li><a href="#yumka-">Yumká</a></li>
-                                        <li><a href="#voleibol">Voleibol</a></li>
-                                </ul>
-                        </li>
-
-                        <li><a href="https://www.liceodeartesyoficios.org/plantel-villahermosa/">Conoce Liceo</a>
-                                
-                        <li><a href="secundarias/diseño-2/home.html">Nosotros</a> </li>
-                       <!--
-                        <li class="dropdown">
-                                <a href="#">Contáctanos</a>
-                                <ul class="submenu">
-                                        <li><a href="mailto:soyliceo2025@gmail.com">soyliceo2025@gmail.com</a></li>
-                                        <li><a href="">993 313 9887</a></li>
-                                        <li><a href="">993 315 9998</a></li>
-                                </ul>
-                        </li>**-->
-
-                        <li><a href="https://www.facebook.com/share/14mWfUvrdA/?mibextid=wwXIfr"> <img class="icono1"
-                                                src="principal/img1/facebook.png" alt="icono" id="facebook"></a>
-                        </li>
-
-                        <li><a href="https://www.instagram.com/soyliceo_2025/"> <img class="icono2"
-                                                src="principal/img1/instagram.png" alt="icono" id="instagram"> </a>
-                        </li>
-
-                        <li><a href="https://x.com/Liceo2025?t=pXpPKTAgCgYi5-N1mEq7tg&s=09"> <img class="icono3"
-                                                src="principal/img1/twiter.png" alt="icono" id="twiter"></a>
-                        </li>
-                </ul>
+              
 
 
-        </div>
+
+<div class="menu-toggle" id="menu-toggle">&#9776;</div>
+<div class="menu_superior">
+  <ul class="menu-inicial">
+    <li><a href="#">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Índice</a>
+      <ul class="submenu">
+        <li><a href="#feb">14 de febrero</a></li>
+        <li><a href="#homenaje">Homenajes</a></li>
+        <li><a href="#yumka-">Yumká</a></li>
+        <li><a href="#voleibol">Voleibol</a></li>
+      </ul>
+    </li>
+    <li><a href="https://www.liceodeartesyoficios.org/plantel-villahermosa/">Conoce Liceo</a></li>
+    <li><a href="secundarias/diseño-2/home.html">Nosotros</a></li>
+    <li><a href="#"><img class="icono1" src="principal/img1/facebook.png" alt="Facebook" id="facebook"></a></li>
+    <li><a href="#"><img class="icono2" src="principal/img1/instagram.png" alt="Instagram" id="instagram"></a></li>
+    <li><a href="#"><img class="icono3" src="principal/img1/twitter.png" alt="Twitter" id="twiter"></a></li>
+  </ul>
+</div>
+
+        
 
         <!--fin del menu-->
         <!--sección inicial-->
@@ -254,22 +239,18 @@
 
 
 
-<script>
-const toggle = document.getElementById('menu-toggle');
-const menu = document.querySelector('.menu_superior'); // 👈 este es el contenedor grande
 
-toggle.addEventListener('click', () => {
-  menu.classList.toggle('active');
-});
+        <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.menu-inicial');
 
-  // Cerrar el menú al hacer clic en un enlace del menú (opcional pero recomendable)
-  const links = document.querySelectorAll('.menu-inicial a');
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('active');
+    toggle.addEventListener('click', function () {
+      menu.classList.toggle('active');
     });
   });
 </script>
+
 
 
 
