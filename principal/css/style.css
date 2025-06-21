@@ -6,6 +6,13 @@ body {
   overflow-x: hidden; /* ✅ evita scroll horizontal */
 }
 
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .menu-toggle {
   position: fixed;
   top: 10px;
