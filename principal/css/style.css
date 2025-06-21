@@ -167,6 +167,28 @@ img, video {
 }
 
 
+@media (min-width: 769px) {
+  .menu-inicial {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* o flex-end, según lo que necesites */
+    margin-left: 40px; /* mueve a la izquierda */
+    background-color: transparent;
+    position: static;
+    width: auto;
+    box-shadow: none;
+  }
+
+  .menu-inicial li a {
+    color: white; /* ✅ blanco en escritorio */
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+
 
 
 
