@@ -104,13 +104,14 @@ img, video {
 }
 
 #facebook {
-  margin-left: 80px;
+  margin-left: 40px;
   height: 40px;
   width: auto;
 }
 
 #instagram,
 #twiter {
+  margin-left: 40px;
   height: 40px;
   width: auto;
 }
@@ -128,7 +129,7 @@ img, video {
     background-color: #ff5757;
     position: fixed;
     top: 60px;
-    left: 0;
+    left: 10;
     width: 100vw;
     height: auto;
     z-index: 999;
@@ -172,7 +173,7 @@ img, video {
     display: flex;
     flex-direction: row;
     justify-content: flex-start; /* o flex-end, según lo que necesites */
-    margin-left: 40px; /* mueve a la izquierda */
+    margin-left: 60px; /* mueve a la izquierda */
     background-color: transparent;
     position: static;
     width: auto;
