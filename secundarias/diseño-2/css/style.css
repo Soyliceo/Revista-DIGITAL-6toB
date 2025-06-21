@@ -540,16 +540,87 @@ section {
     text-align: center;
  }
 
-
 .bonton {
-  width: 100px;
+  width: 70px;
   height: auto;
-  transition: transform 0.8s ease;
-  margin-left: -85px;
-
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
 }
-
 
 .bonton:hover {
-  transform: scale(1.6);
+  transform: scale(1.2);
+}  
+@media (max-width: 768px) {
+  html, body {
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+
+  video {
+    padding-bottom: 20px;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .Andreseselmaschingon {
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .wrapper,
+  .wrapper-1,
+  .wrapper-2,
+  .wrapper-3,
+  .wrapper-4,
+  .wrapper-5,
+  .wrapper-6,
+  .wrapper-7 {
+    height: auto;
+    width: 90%;
+    margin: 20px auto;
+    position: relative;
+  }
+
+  .wrapper .card,
+  .wrapper-1 .card,
+  .wrapper-2 .card,
+  .wrapper-3 .card,
+  .wrapper-4 .card,
+  .wrapper-5 .card,
+  .wrapper-6 .card,
+  .wrapper-7 .card {
+    margin-left: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .wrapper .back-face img,
+  .wrapper-1 .back-face img,
+  .wrapper-2 .back-face img,
+  .wrapper-3 .back-face img,
+  .wrapper-4 .back-face img,
+  .wrapper-5 .back-face img,
+  .wrapper-6 .back-face img,
+  .wrapper-7 .back-face img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+    text-align: center;
+  }
 }
+
