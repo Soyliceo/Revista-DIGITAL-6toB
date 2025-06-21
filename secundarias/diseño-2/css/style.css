@@ -116,8 +116,29 @@ html, body {
   text-align: center;
 }
 
+.back-face {
+  height: 100%;
+}
+
 /* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
+
+
+.wrapper .card,
+.wrapper-1 .card,
+.wrapper-2 .card,
+.wrapper-3 .card,
+.wrapper-4 .card,
+.wrapper-5 .card,
+.wrapper-6 .card,
+.wrapper-7 .card {
+  margin-left: 0;
+  width: 100%;
+  height: 400px; /* AÑADE ESTA ALTURA FIJA */
+  overflow: hidden;
+}
+
+  
   html, body {
     display: block;
   }
