@@ -1,0 +1,240 @@
+
+
+
+
+#boton {
+  width: 85px;
+  padding: 0px;
+  padding-right: 25px;
+  position: fixed;
+  margin-left: 2px;
+
+}
+
+video {
+  width: 85%;
+  margin-left: 70px;
+  margin-bottom:-90px;
+}
+
+
+ P {
+    color: rgb(255, 255, 255);
+  padding: 0 10px;
+  margin-right: 33px;
+
+ }
+body {
+  color: #fff;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  background: #160e2c;
+  
+}
+
+h2, h3, h4{
+  color: #f7f0f0;
+  text-align: center;
+  padding-right: 32px;
+}
+
+.contenedor {
+  padding: 5px 0;
+padding-left: 10px;
+width: 820px;
+height: auto;
+
+
+}
+
+.wrapped {
+  padding: 40px 8%;
+  box-sizing: border-box;
+}
+
+/* ==== GRID DE TARJETAS ==== */
+
+.cajarea {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .cajarea {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==== TARJETA ==== */
+
+.caja {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.caja img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+.caja:hover img {
+  transform: scale(1.2);
+}
+
+/* ==== OVERLAY ==== */
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(transparent, black 80%);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+  color: white;
+}
+
+.caja:hover .overlay {
+  height: 100%;
+}
+
+/* ==== BOTÓN LEER MÁS ==== */
+
+.leer-btn {
+  margin-top: 10px;
+  font-size: 14px;
+  background: #fff;
+  color: #000;
+  padding: 6px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.leer-btn:hover {
+  background: #ddd;
+}
+
+/* ==== MODAL ==== */
+
+.modal-toggle {
+  display: none;
+}
+
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 98;
+}
+
+.modal-content {
+  display: none;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 800px;
+  height: 90%;
+  background: #fff;
+  color: #000;
+  z-index: 99;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.modal-scroll {
+  padding: 30px;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Mostrar modal si el checkbox está marcado */
+.modal-toggle:checked ~ .modal-backdrop,
+.modal-toggle:checked ~ .modal-content {
+  display: block;
+}
+
+/* CERRAR MODAL */
+.cerrar-btn {
+  display: inline-block;
+  margin-top: 30px;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cerrar-btn:hover {
+  background: #444;
+}
+
+
+
+.tituloint {
+  color: #000;
+  text-align: center;
+}
+
+
+.int {
+  color: #000;
+  text-align: justify;
+}
+
+
+.subtitulo {
+  color: #000;
+}
+
+.subing {
+  color: #000;
+  text-align: left;
+}
+
+.subori {
+  color: #000;
+}
+.subtermo{
+  color: #000;
+}
+
+
+.tabla {
+  width: 200px;
+display: flex;
+padding: -100px;
+}
+
+
+#fonf {
+  width: 100%;
+  height: 100%;
+  background-position: 10px;
+  background-image: -moz-radial-gradient(10);
+}
