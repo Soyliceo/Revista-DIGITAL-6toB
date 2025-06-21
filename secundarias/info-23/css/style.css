@@ -12,10 +12,28 @@
 }
 
 video {
-  width: 85%;
-  margin-left: 70px;
-  margin-bottom:-90px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: -60px; /* puedes ajustar este valor */
 }
+
+.contenedor {
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.cajarea {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
 
 
  P {
@@ -38,14 +56,7 @@ h2, h3, h4{
   padding-right: 32px;
 }
 
-.contenedor {
-  padding: 5px 0;
-padding-left: 10px;
-width: 820px;
-height: auto;
 
-
-}
 
 .wrapped {
   padding: 40px 8%;
@@ -54,18 +65,8 @@ height: auto;
 
 /* ==== GRID DE TARJETAS ==== */
 
-.cajarea {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 20px;
-}
 
-@media (max-width: 768px) {
-  .cajarea {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 /* ==== TARJETA ==== */
 
