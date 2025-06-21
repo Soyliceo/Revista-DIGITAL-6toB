@@ -255,13 +255,12 @@
 
 
 <script>
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.querySelector('.menu-inicial');
+const toggle = document.getElementById('menu-toggle');
+const menu = document.querySelector('.menu_superior'); // 👈 este es el contenedor grande
 
-  // Alternar visibilidad
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
 
   // Cerrar el menú al hacer clic en un enlace del menú (opcional pero recomendable)
   const links = document.querySelectorAll('.menu-inicial a');
