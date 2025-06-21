@@ -954,6 +954,30 @@ button:hover span{
       
     }
 
+@media (max-width: 600px) {
+  .popup {
+    width: 90%;            /* Que ocupe el 90% del ancho de pantalla */
+    height: auto;          /* Se ajuste automáticamente en altura */
+    right: 5%;             /* Separación lateral */
+    bottom: 20px;          /* Un poco más arriba del borde */
+    padding: 10px;         /* Menos padding */
+    box-sizing: border-box;
+  }
+
+  #anuncio {
+    width: 100%;           /* El video ocupa todo el ancho del popup */
+    margin-top: 0;         /* Corrige el margen superior */
+  }
+
+  .popup button {
+    display: block;
+    margin: 10px auto 0 auto; /* Centrar el botón en móviles */
+  }
+}
+
+
+
+
 
 
 
