@@ -1,549 +1,20 @@
+/* Reset básico */
 * {
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-html, body{ 
-     display: grid;
-     height: 100%;
-     width: 100%;
-     place-items: center;
-     background: linear-gradient(#160e2c, #010101);
-}
-
-
-
-video {
-  width: 100%;
-  height: auto;
-  display: block;
-  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
+  padding: 0;
 }
 
-selection{
-    color: #ffffff;
-    background: #888;
+html, body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(#160e2c, #010101);
 }
 
-section {
-    display: flex;
-    margin-left: -100px;
-}
-
-.Andreseselmaschingon {
-    margin-left: 400px;
-}
-
-.title{
-    font-size: 16px;
-}
-
-/*sección de monse */
-
-.wrapper{
-    height: 320px;
-    width: 320px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.wrapper .card{
-    margin-left: -100px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding: 5px;
-    background: #FFFF;
-    border-radius: 10px;
-    transform: translateY(0deg);
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-
-.wrapper:hover > .front-face{
-    transform: rotateY(-180deg);
-}
-
-.wrapper .card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.wrapper .back-face{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    transform: rotateY(180deg);
-}
- .wrapper:hover > .back-face {
-    transform: rotateY(0deg);
- }
-
- .wrapper .back-face img {
-    height: 150px;
-    width: 150px;
-    padding: 5px;
-    border-radius: 50%;
-    background: linear-gradient(375deg, #000000, #160e2c);
- }
-
- .wrapper .back-face .info{
-    text-align: center;
- }
-
- .back-face .info .title {
-    font-size: 30px;
-    font-weight: 500;
- }
-
- .subtitulo{
-    font-size: 25px;
-    color: rgb(87, 20, 20);
- }
-
-
- /*Sección de Ivanna*/
-
-.wrapper-2{
-    height: 320px;
-    width: 320px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.wrapper-2 .card{
-    margin-left: -100px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding: 5px;
-    background: #FFFF;
-    border-radius: 10px;
-    transform: translateY(0deg);
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-
-.wrapper-2:hover > .front-face{
-    transform: rotateY(-180deg);
-}
-
-.wrapper-2 .card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-
-.wrapper-2 .back-face{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    transform: rotateY(180deg);
-}
- .wrapper-2:hover > .back-face {
-    transform: rotateY(0deg);
- }
-
- .wrapper-2 .back-face img {
-    height: 150px;
-    width: 150px;
-    padding: 5px;
-    border-radius: 50%;
-    background: linear-gradient(375deg, #000000, #160e2c);
- }
-
- .wrapper-2 .back-face .info{
-    text-align: center;
- }
-
-
- /*Sección de el perro de andres*/
-
-.wrapper-1 {
-
-    
-    padding-right: 300px;
-
-}
-
-.wrapper-1{
-    height: 400px;
-    width: 320px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.wrapper-1 .card{
-    margin-left: 200px;
-    position: absolute;
-    height: 80%;
-    width: 100%;
-    padding: 5px;
-    background: #FFFF;
-    border-radius: 10px;
-    transform: translateY(0deg);
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-
-.wrapper-1:hover > .front-face{
-    transform: rotateY(-180deg);
-}
-
-.wrapper-1 .card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.wrapper-1 .back-face{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    transform: rotateY(180deg);
-}
- .wrapper-1:hover > .back-face {
-    transform: rotateY(0deg);
- }
-
- .wrapper-1 .back-face img {
-    height: 150px;
-    width: 150px;
-    padding: 5px;
-    border-radius: 50%;
-    background: linear-gradient(375deg, #000000, #160e2c);
- }
-
- .wrapper-1 .back-face .info{
-    text-align: center;
- }
-
- /*Sección de karla*/
-
- .wrapper-3{
-    height: 400px;
-    width: 320px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.wrapper-3 .card{
-    margin-left: 200px;
-    position: absolute;
-    height: 80%;
-    width: 100%;
-    padding: 5px;
-    background: #FFFF;
-    border-radius: 10px;
-    transform: translateY(0deg);
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-
-.wrapper-3:hover > .front-face{
-    transform: rotateY(-180deg);
-}
-
-.wrapper-3 .card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.wrapper-3 .back-face{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    transform: rotateY(180deg);
-}
- .wrapper-3:hover > .back-face {
-    transform: rotateY(0deg);
- }
-
- .wrapper-3 .back-face img {
-    height: 150px;
-    width: 150px;
-    padding: 5px;
-    border-radius: 50%;
-    background: linear-gradient(375deg, #000000, #160e2c);
- }
-
- .wrapper-3 .back-face .info{
-    text-align: center;
- }
-
- 
-
-/*sección de andrés*/
-
- .wrapper-4{
-    height: 400px;
-    width: 320px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.wrapper-4 .card{
-    margin-left: -100px;
-    position: absolute;
-    height: 80%;
-    width: 100%;
-    padding: 5px;
-    background: #FFFF;
-    border-radius: 10px;
-    transform: translateY(0deg);
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-
-.wrapper-4:hover > .front-face{
-    transform: rotateY(-180deg);
-}
-
-.wrapper-4 .card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.wrapper-4 .back-face{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    transform: rotateY(180deg);
-}
- .wrapper-4:hover > .back-face {
-    transform: rotateY(0deg);
- }
-
- .wrapper-4 .back-face img {
-    height: 150px;
-    width: 150px;
-    padding: 5px;
-    border-radius: 50%;
-    background: linear-gradient(375deg, #000000, #160e2c);
- }
-
- .wrapper-4 .back-face .info{
-    text-align: center;
- }
-
-
-
-/*sección de gustavo*/
-
-.wrapper-5{
-    height: 400px;
-    width: 320px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.wrapper-5 .card{
-    margin-left: 200px;
-    position: absolute;
-    height: 80%;
-    width: 100%;
-    padding: 5px;
-    background: #FFFF;
-    border-radius: 10px;
-    transform: translateY(0deg);
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-
-.wrapper-5:hover > .front-face{
-    transform: rotateY(-180deg);
-}
-
-.wrapper-5 .card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.wrapper-5 .back-face{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    transform: rotateY(180deg);
-}
- .wrapper-5:hover > .back-face {
-    transform: rotateY(0deg);
- }
-
- .wrapper-5 .back-face img {
-    height: 150px;
-    width: 150px;
-    padding: 5px;
-    border-radius: 50%;
-    background: linear-gradient(375deg, #000000, #160e2c);
- }
-
- .wrapper-5 .back-face .info{
-    text-align: center;
- }
-
-
-
-
- 
-/*sección de ruth*/
-
- .wrapper-7{
-    height: 400px;
-    width: 320px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.wrapper-7 .card{
-    margin-left: 200px;
-    position: absolute;
-    height: 80%;
-    width: 100%;
-    padding: 5px;
-    background: #FFFF;
-    border-radius: 10px;
-    transform: translateY(0deg);
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-
-.wrapper-7:hover > .front-face{
-    transform: rotateY(-180deg);
-}
-
-.wrapper-7 .card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.wrapper-7 .back-face{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    transform: rotateY(180deg);
-}
- .wrapper-7:hover > .back-face {
-    transform: rotateY(0deg);
- }
-
- .wrapper-7 .back-face img {
-    height: 150px;
-    width: 150px;
-    padding: 5px;
-    border-radius: 50%;
-    background: linear-gradient(375deg, #000000, #160e2c);
- }
-
- .wrapper-7 .back-face .info{
-    text-align: center;
- }
-
- .wrapper-7 {
-
-    padding-right: 300px;
-    
-}
-
-/*sección de danna*/
-
-.wrapper-6{
-    height: 400px;
-    width: 320px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.wrapper-6 .card{
-    margin-left: -100px;
-    position: absolute;
-    height: 80%;
-    width: 100%;
-    padding: 5px;
-    background: #FFFF;
-    border-radius: 10px;
-    transform: translateY(0deg);
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-
-.wrapper-6:hover > .front-face{
-    transform: rotateY(-180deg);
-}
-
-.wrapper-6 .card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.wrapper-6 .back-face{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    transform: rotateY(180deg);
-}
- .wrapper-6:hover > .back-face {
-    transform: rotateY(0deg);
- }
-
- .wrapper-6 .back-face img {
-    height: 150px;
-    width: 150px;
-    padding: 5px;
-    border-radius: 50%;
-    background: linear-gradient(375deg, #000000, #160e2c);
- }
-
- .wrapper-6 .back-face .info{
-    text-align: center;
- }
-
+/* Botón regresar */
 .bonton {
   width: 70px;
   height: auto;
@@ -553,79 +24,133 @@ section {
   z-index: 1000;
   transition: transform 0.3s ease;
 }
-
 .bonton:hover {
   transform: scale(1.2);
-}  
+}
 
+/* Video */
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
+/* Contenedor del equipo */
+.team-container {
+  margin-top: 20px;
+}
 
+/* Hacemos que los perfiles estén en fila */
+.team-container section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
 
+/* Estilos generales para cada tarjeta */
+.wrapper {
+  height: 400px;
+  width: 320px;
+  position: relative;
+  perspective: 1000px;
+}
 
+.wrapper .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #FFFF;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
 
+.wrapper:hover .front-face {
+  transform: rotateY(-180deg);
+}
+.wrapper .back-face {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper:hover .back-face {
+  transform: rotateY(0deg);
+}
 
+/* Imágenes en tarjetas */
+.wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapper .back-face img {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #000000, #160e2c);
+}
+
+/* Texto dentro de tarjetas */
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.subtitulo {
+  font-size: 25px;
+  color: rgb(87, 20, 20);
+  text-align: center;
+}
+
+/* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
   html, body {
-    padding: 0;
-    margin: 0;
     display: block;
   }
 
-  section {
+  .video-container video {
+    padding-bottom: 20px;
+  }
+
+  .team-container section {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-left: 0;
   }
 
-  .wrapper,
-  .wrapper-1,
-  .wrapper-2,
-  .wrapper-3,
-  .wrapper-4,
-  .wrapper-5,
-  .wrapper-6,
-  .wrapper-7 {
+  .wrapper {
     width: 90%;
     height: auto;
-    margin: 20px auto !important;
-    position: relative;
+    margin: 20px 0;
   }
 
-  .wrapper .card,
-  .wrapper-1 .card,
-  .wrapper-2 .card,
-  .wrapper-3 .card,
-  .wrapper-4 .card,
-  .wrapper-5 .card,
-  .wrapper-6 .card,
-  .wrapper-7 .card {
+  .wrapper .card {
     margin-left: 0 !important;
     width: 100%;
     height: auto;
     position: relative;
   }
 
-  .wrapper .back-face img,
-  .wrapper-1 .back-face img,
-  .wrapper-2 .back-face img,
-  .wrapper-3 .back-face img,
-  .wrapper-4 .back-face img,
-  .wrapper-5 .back-face img,
-  .wrapper-6 .back-face img,
-  .wrapper-7 .back-face img {
-    height: 120px;
+  .wrapper .back-face img {
     width: 120px;
+    height: 120px;
   }
 
   .title {
     font-size: 18px;
-    text-align: center;
   }
-
   .subtitulo {
     font-size: 16px;
-    text-align: center;
   }
 }
 
