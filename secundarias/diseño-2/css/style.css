@@ -553,6 +553,8 @@ section {
 .bonton:hover {
   transform: scale(1.2);
 }  
+
+
 @media (max-width: 768px) {
   html, body {
     padding: 0;
@@ -560,62 +562,35 @@ section {
     display: block;
   }
 
-  video {
-    padding-bottom: 20px;
-  }
-
   section {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
     margin-left: 0;
   }
 
-  .Andreseselmaschingon {
-    margin: 0 auto;
-    padding: 10px;
-  }
-
-  .wrapper,
-  .wrapper-1,
-  .wrapper-2,
-  .wrapper-3,
-  .wrapper-4,
-  .wrapper-5,
-  .wrapper-6,
-  .wrapper-7 {
-    height: auto;
+  .wrapper {
     width: 90%;
-    margin: 20px auto;
+    height: auto;
+    margin: 20px 0;
     position: relative;
   }
 
-  .wrapper .card,
-  .wrapper-1 .card,
-  .wrapper-2 .card,
-  .wrapper-3 .card,
-  .wrapper-4 .card,
-  .wrapper-5 .card,
-  .wrapper-6 .card,
-  .wrapper-7 .card {
-    margin-left: 0;
-    height: auto;
+  .wrapper .card {
     width: 100%;
+    height: auto;
+    margin-left: 0;
+    position: relative;
   }
 
-  .wrapper .back-face img,
-  .wrapper-1 .back-face img,
-  .wrapper-2 .back-face img,
-  .wrapper-3 .back-face img,
-  .wrapper-4 .back-face img,
-  .wrapper-5 .back-face img,
-  .wrapper-6 .back-face img,
-  .wrapper-7 .back-face img {
+  .wrapper .back-face img {
     height: 120px;
     width: 120px;
   }
 
   .title {
     font-size: 18px;
+    text-align: center;
   }
 
   .subtitulo {
@@ -623,4 +598,3 @@ section {
     text-align: center;
   }
 }
-
