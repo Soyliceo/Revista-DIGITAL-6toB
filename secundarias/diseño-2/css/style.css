@@ -565,6 +565,14 @@ section {
 
 
 @media (max-width: 768px) {
+
+  .wrapper .card {
+    width: 100%;
+    height: auto;
+    margin-left: 0 !important; /* 🔥 Borra cualquier margin-left que tengas */
+    position: relative;
+  }
+    
   html, body {
     padding: 0;
     margin: 0;
