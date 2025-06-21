@@ -82,7 +82,7 @@ z-index: 10;
 
 
 .titulo {
-  padding-left: 128px;
+  padding-left: 90px;
   font-size: 50px;
   font-weight: bold;
   padding-top: 10px;
@@ -98,7 +98,7 @@ z-index: 10;
   padding-right: 150px;
   padding-top: 5px;
   margin-top: -50px;
-  padding-left: 128px;
+  padding-left: 90px;
   font-size: 25px;
   z-index: 10;
   color: white;
@@ -111,7 +111,7 @@ z-index: 10;
   padding-right: 150px;
   padding-top: 5px;
   margin-top: -5px;
-  padding-left: 128px;
+  padding-left: 90px;
   font-size: 40px;
   color: rgb(5, 16, 49);
   z-index: 10;
