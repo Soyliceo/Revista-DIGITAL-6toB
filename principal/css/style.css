@@ -291,6 +291,24 @@ img, video {
 
 }
 
+.portada {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+}
+.portada video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
 /*Fondo sección de febrero*/
 .contenido-principal {
   color: rgb(255, 255, 255);
