@@ -311,15 +311,11 @@ position: fixed;
   margin-top: 40px;
 }
 
-
-
-
 .febfond {
   position: relative;
   width: 100%;
-  max-width: 1500px;
-   /* evita que se estire demasiado */
-  margin: 0 auto;     /* centra horizontalmente */
+  max-width: 1500px;     /* Evita que se estire demasiado en pantallas grandes */
+  margin: 0 auto;        /* Centra horizontalmente */
   height: auto;
   background-image: url("img/febfon.jpg");
   background-size: cover;
@@ -329,33 +325,41 @@ position: fixed;
   justify-content: center;
   padding: 2rem;
   box-sizing: border-box;
+  flex-direction: row;   /* Por defecto horizontal */
 }
 
 .febfond img {
-  max-width: 90%;
+  max-width: 90%;        /* Imagen ocupa hasta el 90% del contenedor */
   height: auto;
   object-fit: contain;
-    
 }
-@media (max-width: 400px) {
+
+/* Tablets y celulares */
+@media (max-width: 768px) {
   .febfond {
-    width: 90%;
-     /* opcional, si quieres que se adapte mejor */
-    height: auto;
+    width: 100vw;            /* Ocupa todo el ancho de la pantalla */
+    max-width: 100vw;
+    padding: 1rem;
+    flex-direction: column;  /* Acomoda contenido en columna */
+    box-sizing: border-box;
+  }
+
+  .febfond img {
+    max-width: 95%;          /* Imagen un poco más grande en móvil */
   }
 }
 
-@media (max-width: 768px) {
+/* Opcional para celulares más pequeños */
+@media (max-width: 400px) {
   .febfond {
+    width: 100vw;
+    max-width: 100vw;
     padding: 1rem;
-    aspect-ratio: auto; 
     flex-direction: column;
   }
-} @media (max-width: 400px) {
-  .febfond {
-    padding: 1rem;
-    aspect-ratio: auto; 
-    flex-direction: column;
+
+  .febfond img {
+    max-width: 95%;
   }
 }
 
