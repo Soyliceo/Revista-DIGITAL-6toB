@@ -1,8 +1,10 @@
 .fondo {
     width: auto;
+    height: 10%;
     padding: 20%;
-    padding-top: 500px;
+    padding-top: 200px;
     background: linear-gradient(to right,  #447696, #160e2c); 
+
 
 }
 
@@ -15,77 +17,102 @@
 
 
 
+
+
 .botoncito {
 width: 100px;
 position: fixed;
+z-index: 10; 
 
 }
 
 
-
-.portada {
-    width: 80%;
-    height: 500px;
-    margin-top: -680px;
-    display: flex;
-    margin-left: 130px;
-    margin-right: 80px;
-
-}
-
-.titulo{
-    padding-left:  128px;
-    font-size: 50px;
-    font-weight: bold;
-    padding-top: 10px;
-    margin-top: 10px;
-    color: white;
-}
-
-.presentacion{
-    padding-right: 150px;
-    padding-top: 5px;
-    margin-top: -50px;
-    padding-left: 128px;
-    font-size: 25px;
-    color: white;
-}
-
-.camino-profesional {
-   padding-right: 150px;
-    padding-top: 5px;
-    margin-top: -5px;
-    padding-left: 128px;
-    font-size: 40px;
-    color: rgb(5, 16, 49);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-
-
-.video-con-fondo {
+/* Contenedor para mantener la proporción de aspecto */
+.video-responsive-container {
   position: relative;
-  width: 1400px; /* mismo ancho que el video */
-  height: 390px; /* mismo alto que el video */
-  margin-bottom: 30px;
+ 
+  width: 80%;
+  padding-bottom: 45%; /* Altura proporcional al ancho */
+  height: 0;
+  overflow: hidden;
+  max-width: 80%;
+  background: #000;
+  margin-left: 10%;
 }
 
-.video-con-fondo img {
+/* El iframe ocupa todo el contenedor */
+.video-responsive-container iframe {
+  
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* para que se adapte bien */
-  z-index: 1;
+  border: 0;
+  z-index: 1; /* Está por debajo del overlay */
 }
 
-.video-con-fondo iframe {
-  margin: 20px;
+/* Capa degradada encima del video */
+.overlay-degradado {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 80%;
   z-index: 2;
+  pointer-events: none; /* Permite que los clics pasen al iframe */
+/* Degradado desde arriba */
+}
+
+/* Ajuste para fondo decorativo si lo usas */
+.fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Toda la altura de la pantalla */
+  z-index: 0;
+  color: aliceblue;
+
+}
+
+
+
+
+
+
+.titulo {
+  padding-left: 128px;
+  font-size: 50px;
+  font-weight: bold;
+  padding-top: 10px;
+  margin-top: 10px;
+  color: white;
+  z-index: 10;
+  position: relative; /* 🔥 necesario */
+}
+
+.presentacion {
+  padding-right: 150px;
+  padding-top: 5px;
+  margin-top: -50px;
+  padding-left: 128px;
+  font-size: 25px;
+  z-index: 10;
+  color: white;
+  position: relative; /* 🔥 necesario */
+}
+
+.camino-profesional {
+  padding-right: 150px;
+  padding-top: 5px;
+  margin-top: -5px;
+  padding-left: 128px;
+  font-size: 40px;
+  color: rgb(5, 16, 49);
+  z-index: 10;
+  position: relative; /* 🔥 necesario */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -95,52 +122,129 @@ position: fixed;
 
 
 
+/* RESPONSIVO para celular */
+/* RESPONSIVO GENERAL PARA PANTALLAS PEQUEÑAS (hasta 768px) */
+@media (max-width: 768px) {
+  .bloque-entrevista {
+    /* Mantenemos flex-direction: row para que las columnas sigan lado a lado */
+    flex-direction: row; /* ¡Importante! Mantiene los elementos en fila */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben (aunque ajustaremos los anchos para que quepan) */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+    margin: 15px auto; /* Ajusta el margen general para dispositivos móviles */
+  }
 
-.ruth{
-  width: 1000px;
-  display: block
- 
+  .columna-video {
+    position: relative; /* Lo mantenemos relativo para un mejor flujo en móvil */
+    width: 60%; /* Ajusta este ancho para el video en móvil. El 60% es un buen punto de partida. */
+    height: auto;
+    margin-left: 0; /* Reinicia márgenes */
+    justify-content: flex-start; /* Alinea el contenido del video a la izquierda */
+    align-items: center; /* Centra verticalmente el video dentro de su columna */
+    padding: 0 0 0 2%; /* Pequeño padding a la izquierda para "jalarlo" */
+  }
 
+  .columna-video iframe {
+    height: 180px; /* Ajusta la altura del video para pantallas pequeñas */
+    width: 100%; /* El video ocupa el 100% del ancho de su columna (60%) */
+    margin: 0; /* Reinicia cualquier margen que pueda haberlo empujado */
+  }
+
+  .columna-imagen {
+    width: 40%; /* La imagen ocupa el 40% restante. 60% (video) + 40% (imagen) = 100% */
+    height: auto;
+    order: 2; /* Puedes ajustar el orden si quieres la imagen primero (order: 1) o después (order: 2) */
+    display: flex; /* Para centrar la imagen dentro de su columna si es necesario */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .columna-imagen img {
+    width: 100%; /* La imagen ocupa el 100% del ancho de su columna (40%) */
+    object-fit: contain; /* Asegura que la imagen se escale sin cortar */
+  }
+
+  /* Si tienes un .video-con-fondo o .video-wrapper, también necesitas ajustarlos */
+  .video-con-fondo {
+    flex-direction: row; /* Mantenemos en fila */
+    align-items: flex-start;
+  }
+
+  .video-wrapper iframe {
+    height: 180px; /* Ajusta según sea necesario */
+    width: 100%; /* Ajustado para el 100% de su contenedor */
+  }
+
+  .imagen-info {
+    max-width: 100%;
+  }
+
+  #cachorrita { /* Ajuste para este elemento específico si se desborda en móvil */
+    width: 30px; /* Reducir el tamaño si es un icono o elemento pequeño */
+    margin-left: auto; /* Centrar o ajustar según la posición deseada */
+    margin-right: auto;
+    display: block; /* Para que margin: auto funcione si no está ya en un contexto flex/grid */
+  }
+}
+
+/* --- ESTILOS DE ESCRITORIO (se aplican por defecto y son sobreescritos por la media query) --- */
+.bloque-entrevista {
+  position: relative;
+  width: 100%;
+  max-width: 2050px;
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row; /* En escritorio, las columnas están en fila */
+  justify-content: center; /* Centra el contenido en escritorio */
+  align-items: center;
+}
+
+/* Imagen como fondo visible (escritorio) */
+.columna-imagen {
+  position: relative;
+  z-index: 1;
+  width: 100%; /* Ocupa el ancho completo por defecto, luego se ajusta por flexbox */
+}
+
+.columna-imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Video encima (escritorio) */
+.columna-video {
+  position: absolute; /* Mantenemos absolute para el efecto de "video encima" en escritorio */
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 2%;
+}
+
+.columna-video iframe {
+  width: 60%;
+  height: 70%;
+  border: none;
+  border-radius: 10px;
 }
 
 
 
-#img-fondo {
-  height: 100px;
-  padding: 0px;
-  margin-top: 1000px;
-}
 
-.video-1 {
-  margin-bottom: -100px;
-}
 
-.video-2 {
-  padding-right: 60%;
-}
 
-.video-3 {
-  padding-right: 60%;
-}
 
-.video-4 {
-  padding-right: 60%;
-}
-
-.video-5 {
-  padding-right: 60%;
-}
-
-.video-6 {
-  padding-right: 60%;
-}
-
-.video-7 {
-  padding-right: 60%;
-}
-
-.video-8 {
-  padding-right: 60%;
+#cachorrita {
+  width: 50px;
+  height: auto;
+  margin-left: 530px;
 }
 
 #cachorrita {
