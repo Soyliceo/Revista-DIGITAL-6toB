@@ -36,7 +36,7 @@ img, video {
 
 /* === Menú contenedor === */
 .menu_superior {
-  position: relative;
+  position: fixed;
   background-color: #ff5757;
   width: 100%;
   z-index: 1000;
