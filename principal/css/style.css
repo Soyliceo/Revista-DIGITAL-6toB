@@ -56,7 +56,7 @@ img, video {
 
 .menu-inicial li {
   border-bottom: none;
-  position: fixed;
+  position: relative;
 }
 
 .menu-inicial li a {
