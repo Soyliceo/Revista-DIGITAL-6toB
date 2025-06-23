@@ -1,69 +1,64 @@
-/* inicio */
 * {
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-  margin: 0;
-  padding: 0;
 }
 
 html, body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(#160e2c, #010101);
+  overflow-x: hidden;
+}
+
+video {
   width: 100%;
-  background: linear-gradient(to bottom, #160e2c, #010101);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-bottom: 100px;
 }
 
-
-/* Botón regresar */
-.bonton {
-  width: 70px;
-  height: auto;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  transition: transform 0.3s ease;
-}
-.bonton:hover {
-  transform: scale(1.2);
+::selection {
+  color: #ffffff;
+  background: #888;
 }
 
-/* Video */
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Contenedor del equipo */
-.team-container {
-  margin-top: 20px;
-}
-
-/* Hacemos que los perfiles estén en fila */
-.team-container section {
+section {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
   justify-content: center;
+  gap: 40px;
+  padding: 20px;
 }
 
-/* Estilos generales para cada tarjeta */
-.wrapper {
-  height: 400px;
+.Andreseselmaschingon {
+  width: 100%;
+  padding: 20px;
+}
+
+.title {
+  font-size: 16px;
+}
+
+/* TARJETA BASE */
+.wrapper,
+.wrapper-1,
+.wrapper-2,
+.wrapper-3,
+.wrapper-4,
+.wrapper-5,
+.wrapper-6,
+.wrapper-7 {
+  height: 320px;
   width: 320px;
-  position: relative;
   perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
-.wrapper .card {
-  position: absolute;
-  top: 0;
-  left: 0;
+.card {
+  position: relative;
   height: 100%;
   width: 100%;
   padding: 5px;
@@ -71,101 +66,242 @@ html, body {
   border-radius: 10px;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.wrapper:hover .front-face {
+.wrapper:hover .front-face,
+.wrapper-1:hover .front-face,
+.wrapper-2:hover .front-face,
+.wrapper-3:hover .front-face,
+.wrapper-4:hover .front-face,
+.wrapper-5:hover .front-face,
+.wrapper-6:hover .front-face,
+.wrapper-7:hover .front-face {
   transform: rotateY(-180deg);
 }
-.wrapper .back-face {
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.wrapper:hover .back-face {
+
+.wrapper:hover .back-face,
+.wrapper-1:hover .back-face,
+.wrapper-2:hover .back-face,
+.wrapper-3:hover .back-face,
+.wrapper-4:hover .back-face,
+.wrapper-5:hover .back-face,
+.wrapper-6:hover .back-face,
+.wrapper-7:hover .back-face {
   transform: rotateY(0deg);
 }
 
-/* Imágenes en tarjetas */
-.wrapper img {
-  width: 100%;
+.card img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
-.wrapper .back-face img {
-  width: 150px;
+
+.back-face {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.back-face img {
   height: 150px;
+  width: 150px;
   padding: 5px;
   border-radius: 50%;
   background: linear-gradient(375deg, #000000, #160e2c);
 }
 
-/* Texto dentro de tarjetas */
+.info {
+  text-align: center;
+}
+
 .title {
   font-size: 30px;
   font-weight: 500;
-  text-align: center;
 }
+
 .subtitulo {
   font-size: 25px;
   color: rgb(87, 20, 20);
-  text-align: center;
 }
 
-.back-face {
-  height: 100%;
+/* BOTÓN */
+.bonton {
+  width: 100px;
+  height: auto;
+  transition: transform 0.8s ease;
+  margin-left: -85px;
 }
 
-/* Estilos para pantallas pequeñas */
-@media (max-width: 768px) {
+.bonton:hover {
+  transform: scale(1.6);
+}
+
+
+
+/* Flip por hover (PC) */
+.wrapper:hover .front-face,
+.wrapper-1:hover .front-face,
+.wrapper-2:hover .front-face,
+.wrapper-3:hover .front-face,
+.wrapper-4:hover .front-face,
+.wrapper-5:hover .front-face,
+.wrapper-6:hover .front-face,
+.wrapper-7:hover .front-face {
+  transform: rotateY(-180deg);
+}
+
+.wrapper:hover .back-face,
+.wrapper-1:hover .back-face,
+.wrapper-2:hover .back-face,
+.wrapper-3:hover .back-face,
+.wrapper-4:hover .back-face,
+.wrapper-5:hover .back-face,
+.wrapper-6:hover .back-face,
+.wrapper-7:hover .back-face {
+  transform: rotateY(0deg);
+}
+
+/* Flip por toque (celular) */
+.card.flipped .front-face {
+  transform: rotateY(-180deg);
+}
+
+.card.flipped .back-face {
+  transform: rotateY(0deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVO PARA cel   */@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .wrapper,
+  .wrapper-1,
+  .wrapper-2,
+  .wrapper-3,
+  .wrapper-4,
+  .wrapper-5,
+  .wrapper-6,
+  .wrapper-7 {
+    width: 320px; /* igual que en escritorio */
+    height: 320px;
+  }
+
+  .card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .card img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .back-face img {
+    height: 130px;
+    width: 130px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+  }
+
+  .bonton {
+    margin-left: 0;
+    width: 80px;
+    display: block;
+    margin: 20px auto;
+  }
+}
+
 
 
 
 
   
-  html, body {
-    display: block;
-  }
 
-  .video-container video {
-    padding-bottom: 20px;
-  }
+/* Flip en celular con clase flipped */
+.card.flipped .front-face {
+  transform: rotateY(-180deg);
+}
 
-  .team-container section {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .wrapper {
-    width: 90%;
-    height: auto;
-    margin: 20px 0;
-  }
-
-  .wrapper .card {
-    margin-left: 0 !important;
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  .wrapper .back-face img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .title {
-    font-size: 18px;
-  }
-  .subtitulo {
-    font-size: 16px;
-  }
-} }
+.card.flipped .back-face {
+  transform: rotateY(0deg);
+}
 
 
 
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.front-face, .back-face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.front-face {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back-face {
+  z-index: 1;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.card.flipped .front-face {
+  transform: rotateY(-180deg);
+}
+
+.card.flipped .back-face {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
